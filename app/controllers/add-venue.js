@@ -5,13 +5,13 @@ export default Ember.Controller.extend({
     addVenue: function() {
       var newVenue = this.store.createRecord('venue', {
         name: this.get('name'),
-        review: this.get('review'),
+        description: this.get('description'),
         date: new Date()
       });
       newVenue.save();
       this.setProperties({
         name: '',
-        review: ''
+        description: '',
       });
     }
   }

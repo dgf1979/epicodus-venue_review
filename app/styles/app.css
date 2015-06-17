@@ -1,0 +1,16 @@
+div.review {
+  border-style: solid;
+  border-color: darkgrey;
+  border-width: 1px;
+  border-radius: 4px;
+  background-color: white;
+  padding: 4px;
+}
+
+.review-author {
+  padding: 2px 0px 0px 2px;
+}
+
+.review-author span.descriptor {
+  font-style: italic;
+}

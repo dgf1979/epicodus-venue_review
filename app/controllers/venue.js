@@ -7,15 +7,22 @@ export default Ember.Controller.extend({
       var review = this.store.createRecord('review', {
         author: this.get('author'),
         body: this.get('body'),
-        reviewDate: new Date()
+        date: new Date()
       });
-      review.save();
 
       var venue = this.model;
-      venue.get('reviews').pushObject(review);
-      venue.save();
+
+      review.save().then(function () {
+        venue.get('reviews').addObject(review);
+        venue.save();
+      });
 
       this.set('reviewing', false);
+
+      this.setProperties({
+        author: '',
+        body: ''
+      });
     },
     showReview: function() {
       this.set('reviewing', true);
