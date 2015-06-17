@@ -1,8 +1,7 @@
 <div class="form-group">
   <form>
     {{input type="text" placeholder="Name" value=name}}
-    {{textarea placeholder="What did you think?" value=review cols="80" rows="6"}}
-    {{input type="hidden" value=current-date}}
+    {{textarea placeholder="Add a brief description" value=description cols="80" rows="6"}}
     <button {{action 'addVenue'}}>Submit</button>
   </form>
 </div>

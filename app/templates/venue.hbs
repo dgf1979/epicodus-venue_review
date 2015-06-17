@@ -2,5 +2,17 @@
 
 {{date-format model.date}}
 <p>
-  {{model.review}}
+  {{model.description}}
 </p>
+
+<button class="btn btn-danger" name="button" {{action 'showReview'}}>Review</button>
+
+{{#if reviewing}}
+  <div class="well form-group">
+    {{input type="text" placeholder="Your Name" value=author}}
+    {{input type="text" placeholder="What do you think?" value=body}}
+    <button class="btn btn-danger" name="button" {{action 'addReview'}}>Add Review</button>
+  </div>
+{{/if}}
+
+{{outlet}}
