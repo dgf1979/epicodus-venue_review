@@ -1,6 +1,6 @@
 <h2>{{model.name}}</h2>
-
-<h4></h4> {{model.description}}
+{{google-map latitude="34.851939" longitude="-82.399752"}}
+<h4>{{model.description}}</h4> 
 
 {{#if reviewing}}
   <div class="well form-group">
@@ -18,8 +18,8 @@
   <h4>Reviews:</h4>
   {{#each review in model.reviews}}
     <div class="review-author">
-      <span class="descriptor">Author: </span> <span>{{review.author}}</span>
-      <span class="descriptor">Posted on:</span> <span>{{date-format review.date}}</span>
+      <span>{{review.author}}</span>
+      <span class="descriptor">posted {{date-format review.date}}</span>:
     </div>
     <div class="review">
       <div class="body">

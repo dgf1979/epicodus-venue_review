@@ -21,10 +21,10 @@ module.exports = function(environment) {
     contentSecurityPolicy: {
       'default-src': "'none'",
       'script-src': "* 'unsafe-inline' 'unsafe-eval'",
-      'font-src': "'self'",
+      'font-src': "*",
       'connect-src': "*",
-      'img-src': "'self'",
-      'style-src': "'self' 'unsafe-inline'",
+      'img-src': "*",
+      'style-src': "* 'unsafe-inline'",
       'frame-src': "'none'"
     }
   };

@@ -9,8 +9,16 @@ div.review {
 
 .review-author {
   padding: 2px 0px 0px 2px;
+  font-weight: bold;
+  font-size: 0.8em;
 }
 
 .review-author span.descriptor {
   font-style: italic;
+  font-weight: normal;
+}
+
+.map-canvas {
+  width: 400px;
+  height: 400px;
 }
