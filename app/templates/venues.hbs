@@ -1,3 +1,13 @@
-<h2>Venues</h2>
-
-{{outlet}}
+<div class="row">
+  <div class="col-sm-6">
+    <h2>Venues</h2>
+    <ul>
+      {{#each venue in model}}
+        <li>{{#link-to 'venue' venue}}{{venue.name}}{{/link-to}}</li>
+      {{/each}}
+    </ul>
+  </div>
+  <div class="col-sm-6">
+    {{outlet}}
+  </div>
+</div>

@@ -8,6 +8,7 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.resource('venues', { path: '/'}, function() {
     this.resource('add-venue');
+    this.resource('venue', { path: 'venue/:id' });
   });
 });
 
