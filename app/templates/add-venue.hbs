@@ -2,6 +2,7 @@
   <form>
     {{input type="text" placeholder="Name" value=name}}
     {{textarea placeholder="What did you think?" value=review cols="80" rows="6"}}
+    {{input type="hidden" value=current-date}}
     <button {{action 'addVenue'}}>Submit</button>
   </form>
 </div>
