@@ -31,3 +31,26 @@ div.review {
   color: orange;
   float: right;
 }
+
+.map-wrap {
+  display: inline-block;
+  background-color: darkgrey;
+  padding: 2px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+}
+
+#background {
+  position: fixed;
+  width: 100%;
+  top: 20%;
+  left: 0px;
+  z-index: -1;
+  margin: auto;
+  text-align: center;
+}
+
+#background img {
+  opacity: 0.3;
+}

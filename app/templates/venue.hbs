@@ -1,6 +1,10 @@
-<h2>{{model.name}}</h2>
-{{google-map address=model.mapAddress}}
-<h4>{{model.description}}</h4>
+
+  <h2>{{model.name}}</h2>
+  <div class="map-wrap">  
+    {{google-map address=model.mapAddress}}
+  </div>
+  <h4>{{model.description}}</h4>
+
 
 {{#liquid-if reviewing class="liquid-if"}}
   <div>
