@@ -7,6 +7,7 @@ export default Ember.Controller.extend({
       var review = this.store.createRecord('review', {
         author: this.get('author'),
         body: this.get('body'),
+        stars: this.get('stars'),
         date: new Date()
       });
 

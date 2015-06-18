@@ -26,3 +26,8 @@ div.review {
 .max-height {
   min-height: 1000px;
 }
+
+.star {
+  color: orange;
+  float: right;
+}
