@@ -2,30 +2,34 @@
 {{google-map address=model.mapAddress}}
 <h4>{{model.description}}</h4>
 
-{{#if reviewing}}
-  <div class="well form-group">
-    {{input type="text" placeholder="Your Name" value=author}}
-    {{input type="text" placeholder="What do you think?" value=body}}
-    <button class="btn btn-danger" name="button" {{action 'addReview'}}>Post This Review</button>
+{{#liquid-if reviewing class="liquid-if"}}
+  <div>
+    <div class="well form-group">
+      {{input type="text" placeholder="Your Name" value=author}}
+      {{input type="text" placeholder="What do you think?" value=body}}
+      <button class="btn btn-danger" name="button" {{action 'addReview'}}>Post This Review</button>
+    </div>
   </div>
 {{else}}
   <button class="btn btn-danger" name="button" {{action 'showReview'}}>Add Review</button>
-{{/if}}
+{{/liquid-if}}
 
 <br><br>
 
-<div class="well">
+<div class="well liquid-ul">
   <h4>Reviews:</h4>
-  {{#each review in model.reviews}}
-    <div class="review-author">
-      <span>{{review.author}}</span>
-      <span class="descriptor">posted {{date-format review.date}}</span>:
-    </div>
-    <div class="review">
-      <div class="body">
-        {{review.body}}
+  {{#liquid-with model.reviews as |reviews|}}
+    {{#each review in reviews}}
+      <div class="review-author">
+        <span>{{review.author}}</span>
+        <span class="descriptor">posted {{date-format review.date}}</span>:
       </div>
-    </div>
-    <hr>
-  {{/each}}
+      <div class="review">
+        <div class="body">
+          {{review.body}}
+        </div>
+      </div>
+      <hr>
+    {{/each}}
+  {{/liquid-with}}
 </div>
