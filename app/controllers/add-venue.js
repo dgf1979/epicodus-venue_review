@@ -13,7 +13,9 @@ export default Ember.Controller.extend({
       this.setProperties({
         name: '',
         description: '',
+        mapAddress: ''
       });
+      this.transitionToRoute('venue', newVenue.id);
     }
   }
 });
