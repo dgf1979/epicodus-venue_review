@@ -22,3 +22,7 @@ div.review {
   width: 400px;
   height: 300px;
 }
+
+.max-height {
+  min-height: 1000px;
+}

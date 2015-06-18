@@ -1,13 +1,8 @@
 export default function(){
   this.transition(
     this.toRoute('venue'),
-    this.use('toLeft'),
-    this.reverse('toRight')
-  );
-
-  this.transition(
-    this.childOf('.liquid-ul'),
-    this.use('toDown')
+    this.use('toLeft', { duration: 500 }),
+    this.reverse('toRight', { duration: 900 })
   );
 
   this.transition(

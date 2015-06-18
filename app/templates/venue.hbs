@@ -16,20 +16,18 @@
 
 <br><br>
 
-<div class="well liquid-ul">
-  <h4>Reviews:</h4>
-  {{#liquid-with model.reviews as |reviews|}}
-    {{#each review in reviews}}
-      <div class="review-author">
-        <span>{{review.author}}</span>
-        <span class="descriptor">posted {{date-format review.date}}</span>:
+<h4>Reviews:</h4>
+<div class="well">
+  {{#each review in model.reviews}}
+    <div class="review-author">
+      <span>{{review.author}}</span>
+      <span class="descriptor">posted {{date-format review.date}}</span>:
+    </div>
+    <div class="review liquid-ul">
+      <div class="body">
+        {{review.body}}
       </div>
-      <div class="review">
-        <div class="body">
-          {{review.body}}
-        </div>
-      </div>
-      <hr>
-    {{/each}}
-  {{/liquid-with}}
+    </div>
+    <hr>
+  {{/each}}
 </div>
