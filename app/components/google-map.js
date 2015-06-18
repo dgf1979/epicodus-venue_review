@@ -3,13 +3,12 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   insertMap: function() {
 
-    var address = "1037 SW Broadway Portland, OR 97205";
-    // var address = this.get('address');
+    // var address = "1037 SW Broadway Portland, OR 97205";
+    var address = this.get('address');
     var mapDiv = this.$('.map-canvas')[0];
+    console.log(address);
     var geocoder = new window.google.maps.Geocoder();
     geocoder.geocode( { 'address': address}, function(results, status) {
-
-      debugger;
 
       if (status === google.maps.GeocoderStatus.OK) {
         var options = {

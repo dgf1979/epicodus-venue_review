@@ -6,6 +6,7 @@ export default Ember.Controller.extend({
       var newVenue = this.store.createRecord('venue', {
         name: this.get('name'),
         description: this.get('description'),
+        mapAddress: this.get('mapAddress'),
         date: new Date()
       });
       newVenue.save();

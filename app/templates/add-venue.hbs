@@ -2,6 +2,8 @@
   <form>
     {{input type="text" placeholder="Name" value=name }}
     <br><br>
+    {{input type="text" placeholder="Map Address" value=mapAddress }}
+    <br><br>
     {{textarea placeholder="Add a brief description" value=description cols="40" rows="6"}}
     <button class="btn btn-primary" {{action 'addVenue'}}>Submit</button>
   </form>
